@@ -1,0 +1,47 @@
+section.price-section
+    .container
+        .title.title--h2.price-title Сколько стоит
+    .price-wrap
+        .price-block
+            +price-icon-1
+            .price-block__title-box
+                .title.title--h4.price-block__title Теория
+                .price-block__subtitle Онлайн курс + поддержка 24/7
+            .price-value
+                .price-value__secondary.price-value__secondary--line-through  2 000₴
+                .price-value__main 0₴
+            hr
+            ul.price-description
+                li.price-description__item
+                    +check
+                    p 25 уроков
+                li.price-description__item
+                    +check
+                    p Видео, 3D-визуализации, интерактивные упражнения
+                li.price-description__item
+                    +check
+                    p Неограниченный доступ к вопросам по ПДР
+                li.price-description__item
+                    +check
+                    p Веб, android и iOS приложения
+
+        .price-block
+            +price-icon-2
+            .price-block__title-box
+                .title.title--h4.price-block__title Вождение
+                .price-block__subtitle 20 уроков
+            .price-value
+                .price-value__main.main-price 5000
+                .price-value__secondary (<span class="lesson-price">200</span>₴/урок)
+            hr
+            p Количество уроков
+            input.select(type='range' min='1' max='3' step="1"  value='2' name='')
+            ul.select-list
+                li.select-item 15
+                li.select-item.select-item--active 20
+                li.select-item 30
+            .price-block__for Подойдет тем, кто быстро обучается новому.
+
+
+
+    .main-price
