@@ -460,7 +460,7 @@ function createInputPseudo( type ) {
 function createButtonPseudo( type ) {
 	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
-		return (name === "input" || name === "button") && elem.type === type;
+		return (name === "input" || name === "_button.sass") && elem.type === type;
 	};
 }
 
@@ -1560,7 +1560,7 @@ Expr = Sizzle.selectors = {
 
 		"button": function( elem ) {
 			var name = elem.nodeName.toLowerCase();
-			return name === "input" && elem.type === "button" || name === "button";
+			return name === "input" && elem.type === "_button.sass" || name === "_button.sass";
 		},
 
 		"text": function( elem ) {

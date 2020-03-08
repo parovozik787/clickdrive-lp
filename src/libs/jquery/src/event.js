@@ -388,7 +388,7 @@ jQuery.event = {
 			// https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click
 			// Support: IE 11 only
 			// ...but not arrow key "clicks" of radio inputs, which can have `button` -1 (gh-2343)
-			!( event.type === "click" && event.button >= 1 ) ) {
+			!( event.type === "click" && event._button >= 1 ) ) {
 
 			for ( ; cur !== this; cur = cur.parentNode || this ) {
 
@@ -747,7 +747,7 @@ jQuery.each( {
 	touches: true,
 
 	which: function( event ) {
-		var button = event.button;
+		var button = event._button;
 
 		// Add which for key events
 		if ( event.which == null && rkeyEvent.test( event.type ) ) {

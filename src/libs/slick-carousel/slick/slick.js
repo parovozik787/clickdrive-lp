@@ -1347,7 +1347,7 @@
                     'tabindex': '-1'
                 });
 
-            }).eq(_.currentSlide).find('button').attr({
+            }).eq(_.currentSlide).find('_button.sass').attr({
                 'aria-selected': 'true',
                 'tabindex': '0'
             }).end();

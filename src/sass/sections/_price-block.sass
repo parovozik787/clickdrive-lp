@@ -5,6 +5,7 @@
   display: flex
   flex-direction: row
   justify-content: space-between
+
 .price-block
   width: 100%
   max-width: 350px
@@ -37,17 +38,17 @@
     background-color: #000
     opacity: 0.08
     margin: 24px 0
+
+
 .price-title
   text-align: center
+
+
 .price-value
   display: flex
   align-items: center
   &__main
-    font-weight: 700
-    font-size: 32px
-    line-height: 38px
     color: #136AFB
-    margin-right: 4px
   &__secondary
     font-weight: 500
     font-size: 18px
@@ -56,6 +57,8 @@
     &--line-through
       text-decoration: line-through
       margin-right: 4px
+
+
 .price-description
   &__item
     display: flex
@@ -67,22 +70,55 @@
     & svg
       min-width: 18px
       margin-right: 8px
+
+
 .main-price
   position: relative
+  font-weight: 700
+  font-size: 32px
+  line-height: 38px
+  margin-right: 4px
   &:after
     content: '₴'
     position: relative
+
+
+.price-sum
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 52px
+  .main-price
+    margin-left: 5px
+
+
 .select
   margin: 31px 0 12px
+
 .select-list
   display: flex
   flex-direction: row
   justify-content: space-between
   margin-bottom: 12px
+
 .select-item
   font-size: 18px
   &--active
     color: #136AFB
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 input[type=range]
