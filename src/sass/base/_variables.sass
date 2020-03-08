@@ -2,10 +2,8 @@
 $xl: '(max-width: 1600px)'
 $lg: '(max-width: 1280px)'
 $lgx: '(max-width: 1279px)'
-$md: '(max-width: 1024px)'
-$mdx: '(max-width: 1023px)'
-$sm: '(max-width: 767px)'
-$smx: '(max-width: 768px)'
+$md: '(max-width: 992px)'
+$sm: '(max-width: 768px)'
 $xs: '(max-width: 500px)'
 $xxs: '(max-width: 374px)'
 
@@ -26,7 +24,11 @@ $font-size: 14px
 $color-text: #121212
 
 // body
-$container: 1175px
+$container: 1205px
+
+//animation
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99)
+$menuItems: 5
 
 // layout
 //\:root
@@ -36,6 +38,4 @@ $container: 1175px
 //  @media #{$mdx-min}
 //    --footer-height: 240px
 \:root
-  --header-height: 74px
-  @media #{$sm}
-    --header-height: 58px
+  --header-height: 100px
