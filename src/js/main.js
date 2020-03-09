@@ -3,13 +3,13 @@ $(function() {
     burger();
     popup();
     // search();
-        const menuBtn = document.querySelector('.nav__btn');
-        menuBtn.remove();
-        if ( $(window).width() < 993) {
-            document.querySelector('.nav__menu').appendChild(menuBtn);
-        }else {
-            document.querySelector('.nav').appendChild(menuBtn);
-        }
+    //     const menuBtn = document.querySelector('.nav__btn');
+    //     menuBtn.remove();
+    //     if ( $(window).width() < 993) {
+    //         document.querySelector('.nav__menu').appendChild(menuBtn);
+    //     }else {
+    //         document.querySelector('.nav').appendChild(menuBtn);
+    //     }
 
 
     let select = document.querySelector('.select'),
