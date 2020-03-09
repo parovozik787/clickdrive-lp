@@ -1,10 +1,13 @@
 function popup() {
-    setTimeout(function () {
-        $(".cookie").addClass('open').delay(400);
-        $(".follow").addClass('open').delay(400);
-    }, 2000);
-    $(".close").click(function () {
-        $(".cookie").removeClass('open');
-        $(".follow").removeClass('open');
-    });
+   let button = document.querySelectorAll(".start-to-learn"),
+       popup = document.querySelector('.popup-section'),
+       popupBg = document.querySelector('.popup-bg');
+   button.forEach(x => {
+      x.addEventListener('click', () =>{
+         popup.classList.add('popup-open');
+      })
+   });
+   popupBg.addEventListener('click', () => {
+      popup.classList.remove('popup-open')
+   })
 }

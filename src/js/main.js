@@ -1,10 +1,16 @@
+function maskInput() {
+    let input = document.querySelector('#phone');
+    let maskOptions = {
+        mask: '+{38} (000) 000-00-00'
+    };
+    let mask = IMask(input, maskOptions);
+}
+maskInput();
 $(function() {
-
-  // popup();
   // slick();
     burger();
+    popup();
     // search();
-    $( window ).resize(function() {
         const menuBtn = document.querySelector('.nav__btn');
         menuBtn.remove();
         if ( $(window).width() < 993) {
@@ -12,7 +18,6 @@ $(function() {
         }else {
             document.querySelector('.nav').appendChild(menuBtn);
         }
-    });
 
 
     let select = document.querySelector('.select'),
@@ -57,5 +62,12 @@ $(function() {
                 x.classList.add('select-item--active');
             }
         })
-    })
+    });
+    let $page = $('html, body');
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+        return false;
+    });
 });

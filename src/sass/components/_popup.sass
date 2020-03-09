@@ -1,0 +1,145 @@
+.popup-section
+  position: fixed
+  top: 0
+  width: 100%
+  height: 100vh
+  z-index: 200
+  display: none
+  &.popup-open
+    display: block
+    transition: 1s linear
+.popup-bg
+  position: absolute
+  background-color: rgba(0, 0, 0, 0.8)
+  width: 100%
+  height: 100%
+  z-index: 100
+.popup
+  position: absolute
+  max-width: 558px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: #ffffff
+  padding: 64px 72px
+  border-radius: 8px
+  z-index: 150
+  transition: .6s linear
+  @media #{$sm}
+    padding: 30px
+  &-title
+    text-align: center
+    margin-bottom: 16px
+  &-text
+    text-align: center
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 40px
+.popup-form
+  input
+    padding: 16px 0
+    color: $color-text
+    &[type="text"]
+      &:focus
+        &::-webkit-input-placeholder
+          color: transparent
+        &:-moz-placeholder
+          color: transparent
+        &:-ms-input-placeholder
+          color: transparent
+    &::-webkit-input-placeholder
+      opacity: .5
+      color: $color-text
+    &:-moz-placeholder
+      opacity: .5
+      color: $color-text
+    &:-ms-input-placeholder
+      opacity: .5
+      color: $color-text
+    &[type="radio"]
+      -webkit-appearance: none
+      padding: 0
+      &#contactChoice1
+        &:checked + label p
+          background-color: #23A7EB
+        &:hover + label p
+          background-color: #23A7EB
+      &#contactChoice2
+        &:checked + label p
+          background-color: #8E60B5
+        &:hover + label p
+          background-color: #8E60B5
+      &#contactChoice3
+        &:checked + label p
+          background-color: #4CAF50
+        &:hover + label p
+          cursor: pointer
+          background-color: #4CAF50
+      &:checked + label p
+        color: #ffffff
+      &:hover + label p
+        color: #ffffff
+  .button
+    margin: 0 auto
+    display: block
+
+
+
+.label-radio
+  border-radius: 100px
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  text-align: center
+  display: block
+  padding: 10px 30px
+  max-width: 130px
+
+
+.popup-fieldset
+  padding-left: 16px
+  background: #FFFFFF
+  box-sizing: border-box
+  border-radius: 4px
+  margin-bottom: 24px
+  color: #888888
+  border: 1px solid #888888
+  &:focus
+    color: #136AFB
+    border: 1px solid #136AFB
+
+
+
+.contact-box
+  display: flex
+  justify-content: space-between
+  margin-bottom: 40px
+  @media #{$sm}
+    flex-direction: column
+  &__item
+    & label
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      & svg
+        margin-bottom: 10px
+        @media #{$sm}
+          display: none
+      &[for="contactChoice1"]
+        color: #23A7EB
+        & p
+          background-color: #E8F7FF
+      &[for="contactChoice2"]
+        color: #8E60B5
+        & p
+          background-color: #F9F1FF
+      &[for="contactChoice3"]
+        color: #4CAF50
+        & p
+          background-color: #EDF7ED
+      &:hover
+        cursor: pointer
+  &__title
+    text-align: center
+    margin-top: 40px

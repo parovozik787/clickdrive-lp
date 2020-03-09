@@ -9,6 +9,10 @@
   display: flex
   justify-content: space-between
   align-items: center
+  @media #{$sm}
+    flex-direction: column
+    #early &
+      flex-direction: column-reverse
 .wrap-block
   display: flex
   justify-content: space-between
@@ -22,6 +26,9 @@
   &__text
     font-size: 20px
     line-height: 32px
+  @media #{$sm}
+    flex-wrap: nowrap
+    flex-direction: column
 .column-block
   &--fl-56
     flex: 0 0 56%
@@ -35,10 +42,16 @@
   color: $color-text
   &--h1
     font-size: 64px
+    @media #{$sm}
+      font-size: 52px
   &--h2
     font-size: 56px
+    @media #{$sm}
+      font-size: 44px
   &--h3
     font-size: 32px
+    @media #{$sm}
+      font-size: 24px
   &--h3
     font-size: 24px
   &--h4
@@ -49,3 +62,6 @@
   line-height: 150%
   color: $color-text
   margin-top: 40px
+  .row-block &
+    @media #{$sm}
+      margin-bottom: 20px

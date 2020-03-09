@@ -1,0 +1,32 @@
+.popup-section
+    .popup-bg
+    .popup
+        .title.title--h3.popup-title Оставить заявку на обучение
+        .popup-text Введите свои контактные даные, наш менеджер свяжется с вами в ближайшее время
+        form.popup-form
+            fieldset.popup-fieldset
+                legend Ваше имя
+                input(type="text" placeholder="Имя" required).popup-form__name
+            fieldset.popup-fieldset
+                legend Номер телефона
+                input(type="tel" placeholder="+38 (000) 000-00-00" minlength="19" maxlength="19" required).popup-form__number#phone
+            p.contact-box__title Выберите, куда Вам писать
+            .contact-box
+                .contact-box__item
+                    input(type="radio" name="contact" id="contactChoice1" value="telegram" checked="checked")
+                    label(for="contactChoice1")
+                        +telegram
+                        p.label-radio Telegram
+
+                .contact-box__item
+                    input(type="radio" name="contact" id="contactChoice2" value="viber")
+                    label(for="contactChoice2")
+                        +viber
+                        p.label-radio Viber
+
+                .contact-box__item
+                    input(type="radio" name="contact" id="contactChoice3" value="whatsapp")
+                    label(for="contactChoice3")
+                        +whatsapp
+                        p.label-radio Whatsapp
+            button(type="submit").button.button--primary Отправить
