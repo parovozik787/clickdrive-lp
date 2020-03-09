@@ -31,18 +31,26 @@
     transform: translate(-50%, -50%) scale(1)
   @media #{$sm}
     padding: 30px
+    max-width: 90%
   &-title
     text-align: center
     margin-bottom: 16px
+    @media #{$sm}
+      font-size: 18px
+      margin-bottom: 10px
   &-text
     text-align: center
     font-size: 16px
     line-height: 20px
     margin-bottom: 40px
+    @media #{$sm}
+      font-size: 14px
+      margin-bottom: 20px
 .popup-form
   input
     padding: 16px 0
     color: $color-text
+    width: 100%
     &[type="text"]
       &:focus
         &::-webkit-input-placeholder
@@ -83,6 +91,8 @@
         color: #ffffff
       &:hover + label p
         color: #ffffff
+    @media #{$sm}
+      padding: 8px 0
   .button
     margin: 0 auto
     display: block
@@ -98,6 +108,8 @@
   display: block
   padding: 10px 30px
   max-width: 130px
+  @media #{$sm}
+    padding: 6px 25px
 
 
 .popup-fieldset
@@ -111,7 +123,8 @@
   &:focus
     color: #136AFB
     border: 1px solid #136AFB
-
+  @media #{$sm}
+    margin-bottom: 15px
 
 
 .contact-box
@@ -120,6 +133,7 @@
   margin-bottom: 40px
   @media #{$sm}
     flex-direction: column
+    margin-bottom: 20px
   &__item
     & label
       display: flex
@@ -147,3 +161,5 @@
   &__title
     text-align: center
     margin-top: 40px
+    @media #{$sm}
+      margin-top: 18px

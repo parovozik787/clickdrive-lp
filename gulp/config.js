@@ -18,18 +18,18 @@ let config = {
     // js: ['./src/js/*.js', './src/js/**/*.js'],
     pug: 'src/pug',
     sass: 'src/sass',
+    fonts: 'src/fonts',
     js: 'src/js',
     img: 'src/img',
-    fonts: 'src/fonts',
     libs: 'src/libs'
   },
   dest: {
     root: destPath,
     html: destPath,
     css: destPath + '/css',
+    fonts: destPath + '/fonts',
     js: destPath + '/js',
     img: destPath + '/img',
-    fonts: destPath + '/fonts',
     libs: destPath + '/libs'
   },
 
